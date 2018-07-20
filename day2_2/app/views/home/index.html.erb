@@ -1,0 +1,39 @@
+<!--음식점 이름 알아내기-->
+
+<div class = "outer-box">
+    <% @restaurants.each do |r| %>
+        <div class = "img-and-info">
+            <!--이미지-->
+            <div class = "background-black"> 
+                <%=image_tag(r.css('a//img').attr('src'), class: "r-image")%>
+            </div>
+            <div class = "r-info"> 
+                <!--가게이름-->
+                <p><%=r.css('.restaurant-list-content//div//h3//a').inner_text%></p>
+                <!--주소-->
+                <p><i class="fas fa-map-marker-alt"></i><%=r.css('.restaurant-list-info//p:nth-child(1)').inner_text%></p>
+                <!--전화번호-->
+                <p><i class="fas fa-phone"></i><%=r.css('.restaurant-list-info//p:nth-child(2)').inner_text%></p>
+            </div>
+        </div>
+    <% end %>
+
+    <% @restaurants2.each do |r| %>
+        <div class = "img-and-info">
+            <!--이미지-->
+            <div class = "background-black"> 
+                <%=image_tag(r.css('a//img').attr('src'), class: "r-image")%>
+            </div>
+            <div class = "r-info"> 
+                <!--가게이름-->
+                <p><%=r.css('.restaurant-list-content//div//h3//a').inner_text%></p>
+                <!--주소-->
+                <p><i class="fas fa-map-marker-alt"></i><%=r.css('.restaurant-list-info//p:nth-child(1)').inner_text%></p>
+                <!--전화번호-->
+                <p><i class="fas fa-phone"></i><%=r.css('.restaurant-list-info//p:nth-child(2)').inner_text%></p>
+            </div>
+        </div>
+
+    <% end %>
+
+</div>
